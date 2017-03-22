@@ -81,4 +81,3 @@ class FaceViewController: UIViewController {
         faceView.eyeBrowTilt = browTilts[expression.eyeBrows] ?? 0.0
     }
 }
-
