@@ -39,18 +39,17 @@ class FaceViewController: UIViewController {
 //        if gesture.direction.contains(.down) {}
 
         switch gesture.direction {
-        case [.right]:
-            print("Swiped right")
+        case [.right]: break
+            //print("Swiped right")
         case [.down]:
             expression.mouth = expression.mouth.sadderMouth()
-            print("Swiped down")
-        case [.left]:
-            print("Swiped left")
+            //print("Swiped down")
+        case [.left]: break
+            //print("Swiped left")
         case [.up]:
             expression.mouth = expression.mouth.happierMouth()
-            print("Swiped up")
-        default:
-            break
+            //print("Swiped up")
+        default: break
         }
     }
     

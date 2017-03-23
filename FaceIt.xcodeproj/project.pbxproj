@@ -58,11 +58,11 @@
 		87041D051E1CD2EC00DDD598 /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
-				87041D181E1CD41500DDD598 /* Supporting Files */,
 				87041D081E1CD2EC00DDD598 /* FaceViewController.swift */,
 				87041D0A1E1CD2EC00DDD598 /* Main.storyboard */,
 				87041D191E1CD5E300DDD598 /* FaceView.swift */,
 				874337E71E81602D00E3C7C6 /* FacialExpression.swift */,
+				87041D181E1CD41500DDD598 /* Supporting Files */,
 			);
 			path = FaceIt;
 			sourceTree = "<group>";
