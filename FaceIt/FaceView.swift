@@ -28,8 +28,9 @@ class FaceView: UIView {
         switch recognizer.state {
         case .changed, .ended:
             scale *= recognizer.scale
-            recognizer.scale  = 1.0
-        default: break
+            recognizer.scale  = 1
+        default:
+            break
         }
     }
     

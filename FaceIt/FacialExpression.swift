@@ -20,11 +20,11 @@ struct FacialExpression {
         case normal
         case furrowed
         
-        func moreRelaxedBrow() -> EyeBrows {
+        func moreRelaxed() -> EyeBrows {
             return EyeBrows(rawValue: rawValue - 1) ?? .relaxed
         }
 
-        func moreFurrowedBrow() -> EyeBrows {
+        func moreFurrowed() -> EyeBrows {
             return EyeBrows(rawValue: rawValue + 1) ?? .furrowed
         }
     }
@@ -36,14 +36,24 @@ struct FacialExpression {
         case grin
         case smile
         
-        func sadderMouth() -> Mouth {
+        //func sadderMouth() -> Mouth {
+        var sadder: Mouth {
             return Mouth(rawValue: rawValue - 1) ?? .frown
         }
-        func happierMouth() -> Mouth {
+        //func happierMouth() -> Mouth {
+        var happier: Mouth {
             return Mouth(rawValue: rawValue + 1) ?? .smile
         }
     }
     
+    var sadder: FacialExpression {
+        return FacialExpression(eyes: self.eyes, eyeBrows: self.eyeBrows.moreRelaxed(), mouth: self.mouth.sadder)
+    }
+    
+    var happier: FacialExpression {
+        return FacialExpression(eyes: self.eyes, eyeBrows: self.eyeBrows.moreFurrowed(), mouth: self.mouth.happier)
+    }
+
     var eyes: Eyes
     var eyeBrows: EyeBrows
     var mouth: Mouth
